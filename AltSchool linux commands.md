@@ -61,7 +61,7 @@ the image above shows how we can use echo command to create a file with content 
 the image above shows how we can use echo command to create a file with no content in it
 
 ### Copying contents from fileA to fileC
-![Copyingcontent](./images/copying%20fileA%20into%20fileC%20-%20Copy.png)
+![Copyingcontent](./images/copying%20fileA%20into%20fileC.png)
 
 the image above shows how we can copy content from fileA into fileC, the ls only list the files withing the misc directory for us to be sure we have the said file copied
 
@@ -75,4 +75,37 @@ the image above shows how we can move content from fileB into fileD the ls only 
 
 ### to compress the tar archieve to create misc.tar.gz file
 ![gzip](./images/gzip.png)
+
+### Creating a new user and forcing the user to chnage password upon login
+![newuserwithpasswdistantchange](./images/new%20username%20with%20instanst%20change%20of%20passwd.png)
+
+.. 
+
+![passwdchange](./images/changing%20passwd%20immediatly%20after%20login.png)
+
+the image above depicts that a user which upon login will prompt it to change passord
+
+### switching to the user with immediate passwdord change upon login
+![userchange](./images/switched%20to%20the%20new%20user%20to%20check.png)
+
+the image above shows how we swtched into the new user and ahncged password upon login
+
+### to lock a user password
+![lockuserpassword](./images/to%20lock%20a%20user%20passwd.png)
+
+this image above depicts how a user assword can be locked 
+
+### Creating a user with no login shell
+![nologinshell](./images/user%20with%20no%20login%20shell.png)
+
+the image above depicts how to create a user with no login shell, to check for this user is it's actually being craeted we can use... 
+awk -F: '$7 ~ /^(\/usr\/sbin\/nologin|\/bin\/false)$/ { print $1 }' /etc/passwd
+
+...Source ChatGPT
+
+### Disable based password authentification for shh
+![passwordauthentificationssh](./images/passwd%20authentication.png)
+![](./images/passwd%20authentication%20for%20ssh%202.png)
+
+we use our vim to access our sshd_config to change the authentification from yes to no
 
